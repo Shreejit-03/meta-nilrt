@@ -37,6 +37,7 @@ SRCREV_FORMAT = "grpc-device"
 
 inherit cmake python3native
 
+CXXFLAGS += "-Wno-error=deprecated-declarations"
 EXTRA_OECMAKE += "-DCMAKE_CROSSCOMPILING=True -DCMAKE_BUILD_TYPE=Release -DUSE_SUBMODULE_LIBS=OFF -DUSE_PYTHON_VIRTUALENV=OFF"
 OECMAKE_TARGET_COMPILE = "ni_grpc_device_server"
 OECMAKE_GENERATOR = "Unix Makefiles"
